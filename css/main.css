@@ -1,6 +1,172 @@
 @import "/css/variables.css";
 @import "/css/reset.css";
 @import "/css/radio.css";
+:root {
+  --dark-blue: #032B43;
+  --light-blue:#043F62;
+--bold-font:#011018;
+--grey-text:#9E9E9E;
+--grey-stick:#929292;
+--body-white:#FEFCFB;
+--yellow:#F9CD7F;
+--red:#B3001B;
+
+--h1:7.576rem;
+--h2:4.263rem;
+--caption:2.399rem;
+--body-size:1.8rem;
+--small:1.6rem;
+}
+
+@media only screen and (max-width: 834px) {
+  :root {
+  --h1:5.493rem;
+  --h2:3.516rem;
+  --caption:2.25rem;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+  :root {
+  --h1:4.883rem;
+  --h2:3.125rem;
+  --caption:1.8rem;
+  --body-size:1.6rem;
+  --small:1.4rem;
+    }
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a{
+	color: unset;
+	text-decoration: none;
+}
+/* Customize the label (the container) */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 29px;
+  width: 29px;
+  background: rgba(254, 252, 251, 0.22);
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background: rgba(254, 252, 251, 0.54);
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: white;
+}
+
+@media only screen and (max-width: 834px) {
+  .checkmark {
+    height: 22px;
+    width: 22px;
+  }
+  .container .checkmark:after {
+    top: 7px;
+    left: 7px;
+    width: 8.34px;
+    height: 8.34px;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .checkmark {
+    height: 19px;
+    width: 19px;
+  }
+  .container .checkmark:after {
+    top: 6px;
+    left: 6px;
+    width: 7px;
+    height: 7px;
+  }
+}
 html {
   font-family: "Montserrat", sans-serif;
   font-size: 62.5%;
