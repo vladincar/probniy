@@ -1,0 +1,34 @@
+:root {
+    --dark-blue: #032B43;
+    --light-blue:#043F62;
+--bold-font:#011018;
+--grey-text:#9E9E9E;
+--grey-stick:#929292;
+--body-white:#FEFCFB;
+--yellow:#F9CD7F;
+--red:#B3001B;
+
+--h1:7.576rem;
+--h2:4.263rem;
+--caption:2.399rem;
+--body-size:1.8rem;
+--small:1.6rem;
+  }
+
+  @media only screen and (max-width: 834px) {
+    :root {
+    --h1:5.493rem;
+    --h2:3.516rem;
+    --caption:2.25rem;
+      }
+  }
+
+  @media only screen and (max-width: 420px) {
+    :root {
+    --h1:4.883rem;
+    --h2:3.125rem;
+    --caption:1.8rem;
+    --body-size:1.6rem;
+    --small:1.4rem;
+      }
+  }
